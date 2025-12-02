@@ -62,13 +62,13 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 md:p-12 font-sans text-slate-800">
+    <div className="min-h-screen flex flex-col items-center justify-center p-6 md:p-12 font-sans text-slate-800" role="main">
       
       {/* Header Section */}
       <header className="text-center mb-10 w-full max-w-2xl mx-auto">
-        <h3 className="text-gray-500 font-medium uppercase tracking-widest text-xs mb-4">
+        <p className="text-gray-500 font-medium uppercase tracking-widest text-xs mb-4">
           AI Dating Assistant
-        </h3>
+        </p>
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-gray-900 mb-2">
           RizzGPT
         </h1>
@@ -100,6 +100,7 @@ const App: React.FC = () => {
                     placeholder="Paste the conversation here..."
                     value={chatInput}
                     onChange={(e) => setChatInput(e.target.value)}
+                    aria-label="Chat history input for AI reply generation"
                 />
             )}
 
@@ -116,14 +117,15 @@ const App: React.FC = () => {
                         ref={fileInputRef} 
                         onChange={handleFileChange} 
                         accept="image/*" 
-                        className="hidden" 
+                        className="hidden"
+                        aria-label="Upload screenshot for AI analysis"
                     />
                     
                     {selectedImage ? (
                         <div className="relative w-full h-full p-2">
                             <img 
                                 src={selectedImage} 
-                                alt="Preview" 
+                                alt="Uploaded screenshot preview for AI analysis" 
                                 className="w-full h-full object-cover rounded-2xl opacity-90" 
                             />
                             <div className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-2xl opacity-0 hover:opacity-100 transition">

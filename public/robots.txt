@@ -1,0 +1,15 @@
+# robots.txt for rizzgpt.in
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rizzgpt.in/sitemap.xml
+
+# Crawl-delay (optional, helps prevent overloading server)
+Crawl-delay: 1
+
+# Disallow specific paths if needed (currently none)
+# Disallow: /admin/
+# Disallow: /private/
+
