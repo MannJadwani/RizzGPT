@@ -67,13 +67,13 @@ const App: React.FC = () => {
       {/* Header Section */}
       <header className="text-center mb-10 w-full max-w-2xl mx-auto">
         <p className="text-gray-500 font-medium uppercase tracking-widest text-xs mb-4">
-          AI Dating Assistant
+          AI Pickup Line Generator
         </p>
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-gray-900 mb-2">
           RizzGPT
         </h1>
         <p className="text-gray-500 text-lg md:text-xl max-w-lg mx-auto leading-relaxed">
-           Your charming AI wingman for perfectly crafted replies.
+          Got no rizz? RizzGPT's got you 😉 Your AI wingman for witty pickup lines, flirty texts, and perfect Tinder openers. Generate instant charm or analyze chat history for context-aware replies.
         </p>
       </header>
 
@@ -90,17 +90,17 @@ const App: React.FC = () => {
         <div className="min-h-[120px] transition-all duration-300">
             {mode === RizzMode.GENERIC && (
                 <div className="flex flex-col items-center justify-center h-32 text-gray-400 italic">
-                    <p>Press the button to generate instant charm.</p>
+                    <p className="text-center px-4">Generate instant AI pickup lines - perfect for Tinder openers, Bumble messages, and flirty texts. No cap, these rizz lines hit different! 🔥</p>
                 </div>
             )}
 
             {mode === RizzMode.CHAT_HISTORY && (
                 <textarea
                     className="w-full h-32 p-4 rounded-3xl border border-gray-200 bg-white/60 focus:bg-white focus:ring-2 focus:ring-violet-500/50 focus:outline-none resize-none shadow-sm transition-all placeholder:text-gray-400 text-gray-700"
-                    placeholder="Paste the conversation here..."
+                    placeholder="Paste your dating app chat history here... RizzGPT will analyze the context and craft the perfect flirty reply!"
                     value={chatInput}
                     onChange={(e) => setChatInput(e.target.value)}
-                    aria-label="Chat history input for AI reply generation"
+                    aria-label="Chat history input for AI-powered dating app reply generation"
                 />
             )}
 
@@ -118,14 +118,14 @@ const App: React.FC = () => {
                         onChange={handleFileChange} 
                         accept="image/*" 
                         className="hidden"
-                        aria-label="Upload screenshot for AI analysis"
+                        aria-label="Upload dating app screenshot for AI-powered pickup line and flirty reply generation"
                     />
                     
                     {selectedImage ? (
                         <div className="relative w-full h-full p-2">
                             <img 
                                 src={selectedImage} 
-                                alt="Uploaded screenshot preview for AI analysis" 
+                                alt="Dating app chat screenshot for AI pickup line generation and flirty reply analysis" 
                                 className="w-full h-full object-cover rounded-2xl opacity-90" 
                             />
                             <div className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-2xl opacity-0 hover:opacity-100 transition">
@@ -137,8 +137,8 @@ const App: React.FC = () => {
                             <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3 text-gray-500">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
                             </div>
-                            <p className="text-sm font-semibold text-gray-600">Upload Screenshot</p>
-                            <p className="text-xs text-gray-400 mt-1">Tap to browse</p>
+                            <p className="text-sm font-semibold text-gray-600">Upload Dating App Screenshot</p>
+                            <p className="text-xs text-gray-400 mt-1">RizzGPT uses OCR to read your chat and suggest the perfect reply</p>
                         </div>
                     )}
                 </div>
