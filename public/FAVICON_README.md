@@ -43,3 +43,4 @@ The favicon features:
 
 The SVG favicon is sufficient for most use cases, but PNG versions provide better compatibility with older browsers.
 
+
